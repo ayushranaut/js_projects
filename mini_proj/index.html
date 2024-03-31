@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .box-items{
+            display: flex;     
+        }
+
+        .box-items1{
+            height: 50px;
+            width: 50px;
+            background-color: #00ffff;
+    
+            border: 5px solid black;
+            margin: 5px; 
+        }
+
+        .box-items2{
+            height: 50px;
+            width: 50px;
+            background-color: rgb(83, 255, 114);
+           
+            border: 5px solid black;
+            margin: 5px; 
+        }
+
+        .box-items3{
+            height: 50px;
+            width: 50px;
+            background-color: rgb(197, 52, 141);
+            
+            border: 5px solid black;
+            margin: 5px; 
+        }
+
+        .box-items4{
+            height: 50px;
+            width: 50px;
+            background-color: rgb(255, 249, 73);
+           
+            border: 5px solid black;
+            margin: 5px; 
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>CHANGE BACKGROUND COLOR</h1>
+        <div class="box-items">
+        <div class="box-items1" id="aqua"></div>
+        <div class="box-items2" id="green"></div>
+        <div class="box-items3" id="purple"></div>
+        <div class="box-items4" id="yellow"></div>
+        </div>
+    </div>
+
+    <script>
+        const body=document.querySelector('.container');
+        const button=document.querySelectorAll('.box-items')
+
+        button.forEach(function(btn){
+            btn.addEventListener('click',function(e){
+                if(e.target.id==="aqua"){
+                    body.style.backgroundColor="#00ffff"
+                }
+                if(e.target.id==="green"){
+                    body.style.backgroundColor="rgb(83, 255, 114)"
+                }
+                if(e.target.id==="purple"){
+                    body.style.backgroundColor="rgb(197, 52, 141)"
+                }
+                if(e.target.id==="yellow"){
+                    body.style.backgroundColor="rgb(255, 249, 73)"
+                }
+            });
+
+        });
+    </script>
+</body>
+</html>
